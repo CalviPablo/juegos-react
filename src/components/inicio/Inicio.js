@@ -10,7 +10,6 @@ export default function Inicio() {
       .get("http://127.0.0.1:8000/api/products/category/consolas")
       .then((res) => {
         setProductosPrincipales(res.data);
-        console.log(res.data);
       });
   }, [setProductosPrincipales]);
 
@@ -19,7 +18,6 @@ export default function Inicio() {
       .get("http://127.0.0.1:8000/api/products/latest/juegos")
       .then((res) => {
         setUltimosProductos(res.data);
-        console.log(res.data);
       });
   }, [setUltimosProductos]);
 
@@ -27,7 +25,7 @@ export default function Inicio() {
     <>
       <div className="container">
         <div className="section">
-          <h1 className="mt-md-3 mt-3 text-title">Próximos lanzamientos </h1>
+          <h1 className="mt-md-3 mt-3 text-title">Próximos lanzamientos</h1>
           <hr />
           {productosPrincipales.map((products) => {
             return (
@@ -85,7 +83,7 @@ export default function Inicio() {
                     </div>
                     <div className="card-footer">
                       <a href={"detalle/" + products.id}>
-                        <p className="btn btn-gris">Mas detalles</p>
+                        <p className="btn btn-secondary">Mas detalles</p>
                       </a>
                     </div>
                   </div>

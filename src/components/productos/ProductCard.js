@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function ProductCard(props) {
   return (
-    <div className="col-lg-4 col-md-6 col-12 mb-3" key={props.product.id}>
+    <div className="col-lg-3 col-md-6 col-12 mb-3">
       <div className="card">
         <img
           className="card-img-top"
@@ -18,8 +18,11 @@ export default function ProductCard(props) {
           </div>
         </div>
         <div className="card-footer">
-          <Link to={"detalle/" + props.product.id}>
-            <p className="btn btn-gris">Mas detalles</p>
+          <Link
+            to={"detalle/" + props.product.id}
+            className="btn btn-secondary"
+          >
+            Mas detalles
           </Link>
         </div>
       </div>

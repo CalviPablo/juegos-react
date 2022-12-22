@@ -49,6 +49,16 @@ export default function Navbar() {
                   Productos
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link
+                  className={
+                    "nav-link " + (active === "/agregar" ? "active" : "")
+                  }
+                  to="/agregar"
+                >
+                  Agregar
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

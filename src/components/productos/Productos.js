@@ -57,7 +57,7 @@ export default function Productos() {
           </div>
           <div className="row mt-4">
             {allProducts.map((product) => {
-              return <ProductCard product={product} />;
+              return <ProductCard product={product} key={product.id} />;
             })}
           </div>
         </div>
